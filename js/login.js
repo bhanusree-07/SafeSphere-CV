@@ -1,71 +1,92 @@
-// ================================
-// SafeSphere Premium Login JS
-// ================================
+// ======================================
+// SafeSphere Login JavaScript
+// ======================================
 
-// Show / Hide Password
+// Password Show / Hide
 
 const password = document.getElementById("password");
 const togglePassword = document.getElementById("togglePassword");
 
-if (togglePassword) {
+if (togglePassword && password) {
+
     togglePassword.addEventListener("click", () => {
 
-        const type = password.getAttribute("type") === "password"
-            ? "text"
-            : "password";
+        if (password.type === "password") {
 
-        password.setAttribute("type", type);
+            password.type = "text";
 
-        togglePassword.innerHTML =
-            type === "password"
-                ? '<i class="fa-solid fa-eye"></i>'
-                : '<i class="fa-solid fa-eye-slash"></i>';
+            togglePassword.innerHTML =
+                '<i class="fa-solid fa-eye-slash"></i>';
 
-    });
-}
+        } else {
 
-// Login Form
+            password.type = "password";
 
-const form = document.querySelector(".login-card");
-
-if (form) {
-
-    form.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        const email = document.querySelector('input[type="email"]').value.trim();
-        const pass = document.getElementById("password").value.trim();
-
-        if (email === "" || pass === "") {
-
-            alert("Please fill all fields.");
-
-            return;
+            togglePassword.innerHTML =
+                '<i class="fa-solid fa-eye"></i>';
 
         }
 
-        const button = document.querySelector(".login-btn");
-
-        button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Logging in...';
-
-        button.disabled = true;
-
-        setTimeout(() => {
-
-            alert("Login Successful!");
-
-            window.location.href = "dashboard.html";
-
-        }, 1500);
-
     });
 
 }
 
+// Form Validation
+
+const loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+
+    const passwordValue = document.getElementById("password").value.trim();
+
+    // Empty Check
+
+    if (email === "" || passwordValue === "") {
+
+        alert("Please fill in all fields.");
+
+        return;
+
+    }
+
+    // Email Validation
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+
+        alert("Please enter a valid email address.");
+
+        return;
+
+    }
+
+    // Loading Animation
+
+    const button = document.querySelector(".login-btn");
+
+    button.disabled = true;
+
+    button.innerHTML =
+        '<i class="fa-solid fa-spinner fa-spin"></i> Signing In...';
+
+    setTimeout(() => {
+
+        alert("Login Successful!");
+
+        window.location.href = "dashboard.html";
+
+    }, 1800);
+
+});
+
 // Input Animation
 
-const inputs = document.querySelectorAll("input");
+const inputs = document.querySelectorAll(".input-box input");
 
 inputs.forEach(input => {
 
