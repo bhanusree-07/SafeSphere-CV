@@ -1,6 +1,6 @@
-/* ==========================================
-   SafeSphere Premium Auth CSS - Part 1
-========================================== */
+/* =====================================================
+   SafeSphere Premium Authentication CSS - Part 1
+===================================================== */
 
 *{
     margin:0;
@@ -15,12 +15,12 @@ html{
 
 body{
     min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    background:linear-gradient(135deg,#06121f,#0b2238,#123b5d,#0a4d68);
-    color:#fff;
+    background:linear-gradient(135deg,#081420,#102840,#16466a);
+    color:#ffffff;
+
+    /* Allow scrolling on small screens */
+    overflow-x:hidden;
+    overflow-y:auto;
 }
 
 /* Animated Background */
@@ -39,14 +39,12 @@ body{
     background:rgba(0,212,255,.08);
     animation:float 20s linear infinite;
     bottom:-220px;
-    filter:blur(1px);
 }
 
 .bg-animation span:nth-child(1){
-    width:180px;
-    height:180px;
+    width:170px;
+    height:170px;
     left:8%;
-    animation-duration:18s;
 }
 
 .bg-animation span:nth-child(2){
@@ -59,28 +57,28 @@ body{
 .bg-animation span:nth-child(3){
     width:220px;
     height:220px;
-    left:52%;
-    animation-duration:20s;
+    left:50%;
+    animation-duration:18s;
 }
 
 .bg-animation span:nth-child(4){
-    width:160px;
-    height:160px;
-    left:74%;
-    animation-duration:17s;
+    width:180px;
+    height:180px;
+    left:72%;
+    animation-duration:22s;
 }
 
 .bg-animation span:nth-child(5){
-    width:300px;
-    height:300px;
+    width:280px;
+    height:280px;
     left:88%;
-    animation-duration:28s;
+    animation-duration:26s;
 }
 
 @keyframes float{
 
 0%{
-transform:translateY(0) rotate(0);
+transform:translateY(0) rotate(0deg);
 opacity:0;
 }
 
@@ -102,11 +100,17 @@ opacity:0;
 
     width:95%;
     max-width:1300px;
+    min-height:100vh;
+
+    margin:auto;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
     gap:60px;
-    padding:40px;
+
+    padding:50px 30px;
 
 }
 
@@ -114,7 +118,7 @@ opacity:0;
 
 .left-panel{
 
-    width:50%;
+    flex:1;
 
 }
 
@@ -123,6 +127,10 @@ opacity:0;
     display:flex;
     align-items:center;
     gap:12px;
+
+    color:white;
+    text-decoration:none;
+
     margin-bottom:30px;
 
 }
@@ -144,65 +152,87 @@ opacity:0;
 .badge{
 
     display:inline-block;
+
     padding:10px 20px;
+
     border-radius:30px;
+
     background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
     color:#00d4ff;
+
     margin-bottom:25px;
-    border:1px solid rgba(255,255,255,.12);
 
 }
 
 .left-panel h1{
 
     font-size:58px;
+
+    line-height:1.2;
+
     margin-bottom:20px;
-    line-height:1.15;
 
 }
 
 .left-panel p{
 
-    color:#d8d8d8;
-    line-height:1.8;
     font-size:18px;
+
+    color:#d7d7d7;
+
+    line-height:1.8;
+
     max-width:550px;
 
 }
 
-/* Stats */
+/* Statistics */
 
 .stats{
 
     display:flex;
+
     gap:25px;
-    margin-top:50px;
+
+    margin-top:45px;
 
 }
 
 .stat-card{
 
     width:180px;
+
     padding:25px;
-    border-radius:22px;
+
+    border-radius:20px;
+
     backdrop-filter:blur(20px);
+
     background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.1);
-    transition:.4s;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.35s;
 
 }
 
 .stat-card:hover{
 
     transform:translateY(-8px);
-    box-shadow:0 15px 40px rgba(0,212,255,.18);
+
+    box-shadow:0 20px 40px rgba(0,212,255,.18);
 
 }
 
 .stat-card i{
 
     font-size:28px;
+
     color:#00d4ff;
+
     margin-bottom:15px;
 
 }
@@ -210,13 +240,14 @@ opacity:0;
 .stat-card h3{
 
     font-size:30px;
+
     margin-bottom:8px;
 
 }
 
 .stat-card span{
 
-    color:#bdbdbd;
+    color:#cccccc;
 
 }
 
@@ -224,23 +255,31 @@ opacity:0;
 
 .right-panel{
 
-    width:50%;
+    flex:1;
+
     display:flex;
+
     justify-content:center;
 
 }
 
-/* Auth Card */
+/* Glass Card */
 
 .login-card,
 .signup-card{
 
     width:450px;
-    padding:45px;
-    border-radius:30px;
-    backdrop-filter:blur(25px);
+
     background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:28px;
+
+    padding:45px;
+
     box-shadow:0 25px 60px rgba(0,0,0,.45);
 
 }
@@ -249,6 +288,7 @@ opacity:0;
 .signup-card h2{
 
     font-size:34px;
+
     margin-bottom:10px;
 
 }
@@ -257,72 +297,66 @@ opacity:0;
 .signup-card p{
 
     color:#cccccc;
+
     margin-bottom:35px;
 
 }
+/* =====================================================
+   SafeSphere Premium Authentication CSS - Part 2
+===================================================== */
 
-/* Inputs */
+/* Input Fields */
 
 .input-box{
-
     position:relative;
     margin-bottom:22px;
-
 }
 
 .input-box i{
-
     position:absolute;
     left:18px;
     top:50%;
     transform:translateY(-50%);
     color:#00d4ff;
     font-size:16px;
-
 }
 
 .input-box input{
-
     width:100%;
-    padding:16px 18px 16px 50px;
+    padding:16px 18px 16px 52px;
     border:none;
     outline:none;
     border-radius:14px;
     background:rgba(255,255,255,.08);
+    border:1px solid transparent;
     color:#fff;
     font-size:15px;
     transition:.3s;
-
 }
 
 .input-box input::placeholder{
-
-    color:#b8b8b8;
-
+    color:#bdbdbd;
 }
 
 .input-box input:focus{
-
-    border:1px solid #00d4ff;
-    box-shadow:0 0 18px rgba(0,212,255,.3);
-
+    border-color:#00d4ff;
+    box-shadow:0 0 20px rgba(0,212,255,.25);
+    background:rgba(255,255,255,.10);
 }
 
-.password-box span{
+/* Password Eye */
 
+.password-box span{
     position:absolute;
     right:18px;
     top:50%;
     transform:translateY(-50%);
     cursor:pointer;
     color:#00d4ff;
-
+    font-size:16px;
 }
-/* ==========================================
-   SafeSphere Premium Auth CSS - Part 2
-========================================== */
 
-/* Remember & Forgot */
+/* Remember Me */
 
 .options{
     display:flex;
@@ -336,7 +370,7 @@ opacity:0;
     display:flex;
     align-items:center;
     gap:8px;
-    color:#d9d9d9;
+    color:#ddd;
     cursor:pointer;
 }
 
@@ -351,279 +385,202 @@ opacity:0;
 }
 
 .options a:hover{
-    color:#5ce8ff;
+    color:#6beeff;
 }
 
-/* Main Button */
+/* Login & Signup Button */
 
 .login-btn,
 .signup-btn{
-
     width:100%;
     padding:16px;
     border:none;
     border-radius:14px;
-    background:linear-gradient(90deg,#00d4ff,#00b4d8);
-    color:#06121f;
+    cursor:pointer;
     font-size:17px;
     font-weight:700;
-    cursor:pointer;
+    color:#081420;
+    background:linear-gradient(90deg,#00d4ff,#00b6d9);
     transition:.35s;
 }
 
 .login-btn:hover,
 .signup-btn:hover{
-
     transform:translateY(-3px);
     box-shadow:0 15px 35px rgba(0,212,255,.35);
-
 }
 
 /* Divider */
 
 .divider{
-
     display:flex;
     align-items:center;
     margin:28px 0;
-    color:#bcbcbc;
-
+    color:#bfbfbf;
 }
 
 .divider::before,
 .divider::after{
-
     content:"";
     flex:1;
     height:1px;
     background:rgba(255,255,255,.15);
-
 }
 
 .divider span{
-
     margin:0 15px;
     font-size:14px;
-
 }
 
-/* Social Buttons */
+/* Social Login */
 
 .social-login{
-
     display:flex;
     gap:15px;
-
 }
 
 .social-login button{
-
     flex:1;
     padding:14px;
     border-radius:12px;
     border:1px solid rgba(255,255,255,.15);
     background:rgba(255,255,255,.08);
-    color:white;
+    color:#fff;
     cursor:pointer;
     transition:.3s;
-
 }
 
 .social-login button:hover{
-
     background:#00d4ff;
-    color:#06121f;
-    transform:translateY(-2px);
-
+    color:#081420;
 }
 
 .social-login i{
-
     margin-right:8px;
-
 }
 
-/* Bottom Link */
+/* Bottom Text */
 
 .bottom-text{
-
+    margin-top:28px;
     text-align:center;
-    margin-top:30px;
-    color:#d6d6d6;
-
+    color:#d5d5d5;
 }
 
 .bottom-text a{
-
     color:#00d4ff;
     text-decoration:none;
     font-weight:600;
-
 }
 
 .bottom-text a:hover{
-
     text-decoration:underline;
-
 }
 
-/* Signup Extra */
+/* Signup Only */
 
 .name-group{
-
     display:flex;
     gap:15px;
-
 }
 
 .name-group .input-box{
-
     flex:1;
-
 }
 
 /* Password Strength */
 
 .strength{
-
     margin-top:-10px;
     margin-bottom:18px;
-
 }
 
 .strength-bar{
-
     width:100%;
     height:8px;
-    border-radius:20px;
     background:rgba(255,255,255,.08);
+    border-radius:20px;
     overflow:hidden;
-
 }
 
 .strength-fill{
-
     width:0%;
     height:100%;
     background:#00d4ff;
     transition:.4s;
-
 }
 
 .strength p{
-
-    font-size:13px;
     margin-top:8px;
-    color:#bfbfbf;
-
+    font-size:13px;
+    color:#bdbdbd;
 }
 
 /* Terms */
 
 .terms{
-
     display:flex;
     align-items:flex-start;
     gap:10px;
     margin-bottom:25px;
+    color:#ddd;
     font-size:14px;
-    color:#d5d5d5;
-
 }
 
 .terms input{
-
     accent-color:#00d4ff;
     margin-top:3px;
-
 }
 
 .terms a{
-
     color:#00d4ff;
     text-decoration:none;
-
 }
+/* =====================================================
+   SafeSphere Premium Authentication CSS - Part 3
+===================================================== */
 
-/* Success Animation */
-
-.login-btn:active,
-.signup-btn:active{
-
-    transform:scale(.98);
-
-}
-
-/* Card Hover */
-
-.login-card:hover,
-.signup-card:hover{
-
-    box-shadow:0 35px 70px rgba(0,212,255,.15);
-    transition:.4s;
-
-}
-
-/* Input Hover */
-
-.input-box input:hover{
-
-    background:rgba(255,255,255,.11);
-
-}
-
-/* Floating Glow */
-
-.login-card::before,
-.signup-card::before{
-
-    content:"";
-    position:absolute;
-    inset:0;
-    border-radius:30px;
-    padding:1px;
-    background:linear-gradient(135deg,
-    rgba(0,212,255,.4),
-    transparent,
-    rgba(255,255,255,.15));
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite:xor;
-    mask-composite:exclude;
-    pointer-events:none;
-
-}
+/* Card Border Glow */
 
 .login-card,
 .signup-card{
-
     position:relative;
-
-}
-/* ==========================================
-   SafeSphere Premium Auth CSS - Part 3
-========================================== */
-
-/* Smooth Fade Animation */
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    overflow:hidden;
 }
 
-.left-panel,
-.right-panel{
-    animation:fadeUp .8s ease;
+.login-card::before,
+.signup-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    padding:1px;
+    border-radius:28px;
+    background:linear-gradient(
+        135deg,
+        rgba(0,212,255,.4),
+        transparent,
+        rgba(255,255,255,.15)
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    pointer-events:none;
 }
 
-/* Button Shine Effect */
+/* Hover Effect */
+
+.login-card:hover,
+.signup-card:hover{
+    transform:translateY(-5px);
+    transition:.35s;
+    box-shadow:0 30px 60px rgba(0,212,255,.18);
+}
+
+/* Button Shine */
 
 .login-btn,
 .signup-btn{
@@ -639,12 +596,14 @@ opacity:0;
     left:-120%;
     width:100%;
     height:100%;
+
     background:linear-gradient(
         90deg,
         transparent,
         rgba(255,255,255,.35),
         transparent
     );
+
     transition:.8s;
 }
 
@@ -653,7 +612,7 @@ opacity:0;
     left:120%;
 }
 
-/* Logo Hover */
+/* Logo Animation */
 
 .logo{
     transition:.3s;
@@ -663,13 +622,47 @@ opacity:0;
     transform:scale(1.03);
 }
 
-.logo i{
+.logo:hover i{
+    transform:rotate(-12deg);
     transition:.3s;
 }
 
-.logo:hover i{
-    transform:rotate(-10deg);
-    color:#5ce8ff;
+/* Input Animation */
+
+.input-box{
+    transition:.3s;
+}
+
+.input-box:focus-within{
+    transform:scale(1.02);
+}
+
+/* Fade Animation */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.left-panel{
+    animation:fadeUp .8s ease;
+}
+
+.right-panel{
+    animation:fadeUp 1s ease;
 }
 
 /* Scrollbar */
@@ -678,16 +671,18 @@ opacity:0;
     width:8px;
 }
 
+::-webkit-scrollbar-track{
+    background:#081420;
+}
+
 ::-webkit-scrollbar-thumb{
     background:#00d4ff;
     border-radius:20px;
 }
 
-::-webkit-scrollbar-track{
-    background:#081420;
-}
-
-/* Responsive */
+/* ==========================
+      RESPONSIVE DESIGN
+========================== */
 
 @media(max-width:1100px){
 
@@ -695,9 +690,12 @@ opacity:0;
 .signup-container{
 
     flex-direction:column;
-    text-align:center;
+    justify-content:center;
     gap:40px;
-    padding:25px;
+
+    min-height:auto;
+
+    padding:40px 20px;
 
 }
 
@@ -706,10 +704,13 @@ opacity:0;
 
     width:100%;
 
+    text-align:center;
+
 }
 
 .left-panel p{
 
+    max-width:100%;
     margin:auto;
 
 }
@@ -724,13 +725,28 @@ opacity:0;
 .signup-card{
 
     width:100%;
-    max-width:480px;
+    max-width:470px;
 
 }
 
 }
+
+/* Tablet */
 
 @media(max-width:768px){
+
+body{
+
+    overflow-y:auto;
+
+}
+
+.login-container,
+.signup-container{
+
+    padding:30px 20px;
+
+}
 
 .left-panel h1{
 
@@ -738,9 +754,9 @@ opacity:0;
 
 }
 
-.logo h2{
+.logo{
 
-    font-size:28px;
+    justify-content:center;
 
 }
 
@@ -766,12 +782,14 @@ opacity:0;
 .options{
 
     flex-direction:column;
-    gap:12px;
     align-items:flex-start;
+    gap:12px;
 
 }
 
 }
+
+/* Mobile */
 
 @media(max-width:500px){
 
@@ -781,17 +799,9 @@ body{
 
 }
 
-.login-container,
-.signup-container{
+.left-panel{
 
-    padding:15px;
-
-}
-
-.login-card,
-.signup-card{
-
-    padding:30px 20px;
+    margin-bottom:20px;
 
 }
 
@@ -801,9 +811,28 @@ body{
 
 }
 
+.left-panel p{
+
+    font-size:15px;
+
+}
+
 .badge{
 
     font-size:13px;
+
+}
+
+.logo h2{
+
+    font-size:26px;
+
+}
+
+.login-card,
+.signup-card{
+
+    padding:28px 20px;
 
 }
 
