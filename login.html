@@ -2,244 +2,185 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeSphere | Login</title>
 
-<title>SafeSphere | Login</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-
-<link rel="stylesheet" href="css/auth.css">
-
+    <link rel="stylesheet" href="css/login.css">
 </head>
-
 
 <body>
 
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-<div class="auth-wrapper">
+    <div class="login-container">
 
+        <!-- Left Side -->
+        <div class="left-panel">
 
-<!-- LEFT PREMIUM SECTION -->
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h2>SafeSphere</h2>
+            </div>
 
-<div class="left-panel">
+            <span class="badge">
+                AI Powered Safety Platform
+            </span>
 
+            <h1>
+                Welcome Back
+            </h1>
 
-<div class="brand">
+            <p>
+                Continue monitoring workplace safety with real-time PPE detection,
+                worker verification and industrial analytics.
+            </p>
 
-<i class="fa-solid fa-shield-halved"></i>
+            <div class="stats">
 
-<h1>SafeSphere</h1>
+                <div class="stat-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>124+</h3>
+                    <span>Workers</span>
+                </div>
 
-</div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>97%</h3>
+                    <span>Compliance</span>
+                </div>
 
+            </div>
 
+        </div>
 
-<div class="hero-text">
+        <!-- Right Side -->
 
-<h2>
-SMART INDUSTRIAL
-<br>
-SAFETY PLATFORM
-</h2>
+        <div class="right-panel">
 
+            <form class="login-card">
 
-<p>
-AI powered PPE detection,
-real-time monitoring and
-worker protection system.
-</p>
+                <h2>Login</h2>
 
+                <p>
+                    Access your SafeSphere dashboard
+                </p>
 
-</div>
+                <!-- Email -->
 
+                <div class="input-box">
 
+                    <i class="fa-solid fa-envelope"></i>
 
-<div class="feature-box">
+                    <input
+                        type="email"
+                        placeholder="Email Address"
+                        required>
 
+                </div>
 
-<div class="feature">
+                <!-- Password -->
 
-<i class="fa-solid fa-helmet-safety"></i>
+                <div class="input-box password-box">
 
-<div>
+                    <i class="fa-solid fa-lock"></i>
 
-<h3>PPE Detection</h3>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        required>
 
-<p>AI identifies safety equipment</p>
+                    <span id="togglePassword">
 
-</div>
+                        <i class="fa-solid fa-eye"></i>
 
-</div>
+                    </span>
 
+                </div>
 
+                <div class="options">
 
-<div class="feature">
+                    <label>
 
-<i class="fa-solid fa-video"></i>
+                        <input type="checkbox">
 
-<div>
+                        Remember Me
 
-<h3>Live Monitoring</h3>
+                    </label>
 
-<p>24/7 workplace surveillance</p>
+                    <a href="#">
+                        Forgot Password?
+                    </a>
 
-</div>
+                </div>
 
-</div>
+                <button type="submit" class="login-btn">
 
+                    Login
 
+                </button>
 
-<div class="feature">
+                <div class="divider">
 
-<i class="fa-solid fa-user-shield"></i>
+                    <span>OR</span>
 
-<div>
+                </div>
 
-<h3>Worker Security</h3>
+                <div class="social-login">
 
-<p>Smart employee verification</p>
+                    <button type="button">
 
-</div>
+                        <i class="fab fa-google"></i>
 
-</div>
+                        Google
 
+                    </button>
 
+                    <button type="button">
 
-</div>
+                        <i class="fab fa-microsoft"></i>
 
+                        Microsoft
 
+                    </button>
 
+                </div>
 
-<img class="worker-image"
-src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80">
+                <div class="bottom-text">
 
+                    Don't have an account?
 
-</div>
+                    <a href="signup.html">
 
+                        Sign Up
 
+                    </a>
 
+                </div>
 
+            </form>
 
+        </div>
 
-<!-- LOGIN SECTION -->
+    </div>
 
-
-<div class="right-panel">
-
-
-<div class="login-card">
-
-
-<h1>
-Welcome Back
-</h1>
-
-
-<p>
-Login to access your safety dashboard
-</p>
-
-
-
-
-<form action="dashboard.html">
-
-
-
-<label>Email Address</label>
-
-<div class="input-box">
-
-<i class="fa-solid fa-envelope"></i>
-
-<input type="email"
-placeholder="Enter email">
-
-</div>
-
-
-
-
-<label>Password</label>
-
-
-<div class="input-box">
-
-<i class="fa-solid fa-lock"></i>
-
-<input type="password"
-placeholder="Enter password">
-
-</div>
-
-
-
-<div class="options">
-
-
-<label>
-
-<input type="checkbox">
-
-Remember me
-
-</label>
-
-
-<a href="#">
-Forgot Password?
-</a>
-
-
-</div>
-
-
-
-
-<button>
-
-LOGIN
-
-</button>
-
-
-
-
-<div class="bottom">
-
-Don't have an account?
-
-<a href="signup.html">
-
-Create Account
-
-</a>
-
-
-</div>
-
-
-
-</form>
-
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
+    <script src="js/login.js"></script>
 
 </body>
 
