@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SafeSphere Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <h2>SafeSphere</h2>
+
+        <span>Industrial Safety Compliance</span>
+
+    </div>
+
+    <nav>
+
+        <a class="active">
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a>
+            <i class="fa-solid fa-video"></i>
+            <span>Live Monitor</span>
+        </a>
+
+        <a href="employees.html">
+    <i class="fa-solid fa-users"></i>
+    <span>Employees</span>
+</a>
+
+        <a>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>Alerts</span>
+        </a>
+
+        <a>
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Reports</span>
+        </a>
+
+        <a>
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+
+        <a class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+
+    </nav>
+
+</aside>
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Dashboard</h1>
+
+                <p>Welcome back, Admin.</p>
+
+            </div>
+
+            <div class="top-right">
+
+                <button>🔔</button>
+
+                <img src="https://i.pravatar.cc/45"
+                     alt="">
+
+            </div>
+
+        </header>
+
+
+
+        <!-- KPI CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+    <div class="icon blue">
+        <i class="fa-solid fa-users"></i>
+    </div>
+
+    <div class="card-info">
+        <h4>Workers On Site</h4>
+        <h2>124</h2>
+    </div>
+
+</div>
+
+            <div class="card">
+
+    <div class="icon green-bg">
+        <i class="fa-solid fa-shield-halved"></i>
+    </div>
+
+    <div class="card-info">
+        <h4>PPE Compliance</h4>
+        <h2>97%</h2>
+    </div>
+
+</div>
+
+            <div class="card">
+
+    <div class="icon orange">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+    </div>
+
+    <div class="card-info">
+        <h4>Violations</h4>
+        <h2>03</h2>
+    </div>
+
+</div>
+
+            <div class="card">
+
+    <div class="icon red-bg">
+        <i class="fa-solid fa-door-open"></i>
+    </div>
+
+    <div class="card-info">
+        <h4>Gate Status</h4>
+        <h2 class="green">OPEN</h2>
+    </div>
+
+</div>
+
+        </section>
+
+
+
+        <!-- GRID -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- CAMERA -->
+
+            <div class="camera card-big">
+
+                <div class="card-header">
+
+                    <h3>Live Monitoring</h3>
+
+                    <span>Camera 01</span>
+
+                </div>
+
+                <div class="camera-box">
+
+                    Live Camera Feed
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PPE -->
+
+            <div class="ppe card-big">
+
+                <div class="card-header">
+
+                    <h3>PPE Status</h3>
+
+                </div>
+
+                <ul>
+
+                    <li>Helmet <span class="success">✔</span></li>
+
+                    <li>Vest <span class="success">✔</span></li>
+
+                    <li>Gloves <span class="success">✔</span></li>
+
+                    <li>Shoes <span class="danger">✖</span></li>
+
+                    <li>ID Card <span class="success">✔</span></li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- ALERTS -->
+
+            <div class="alerts card-big">
+
+                <div class="card-header">
+
+                    <h3>Recent Alerts</h3>
+
+                </div>
+
+                <div class="alert">
+
+                    ⚠ Helmet Missing
+
+                </div>
+
+                <div class="alert">
+
+                    ✔ Attendance Recorded
+
+                </div>
+
+                <div class="alert">
+
+                    🚪 Gate Opened
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RECENT -->
+
+            <div class="recent card-big">
+
+                <div class="card-header">
+
+                    <h3>Recent Activity</h3>
+
+                </div>
+
+                <table>
+
+                    <tr>
+
+                        <th>Employee</th>
+
+                        <th>Time</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Rahul</td>
+
+                        <td>09:21</td>
+
+                        <td class="green">Granted</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Anjali</td>
+
+                        <td>09:30</td>
+
+                        <td class="red">Denied</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Ramesh</td>
+
+                        <td>09:42</td>
+
+                        <td class="green">Granted</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
