@@ -1,43 +1,50 @@
 // ======================================
-// SafeSphere Premium Signup JS
+// SafeSphere Signup JavaScript
 // ======================================
 
-// Password Toggle
+// Password Elements
 
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const togglePassword = document.getElementById("togglePassword");
 
-if (togglePassword) {
-
-    togglePassword.addEventListener("click", () => {
-
-        const type =
-            password.type === "password"
-                ? "text"
-                : "password";
-
-        password.type = type;
-        confirmPassword.type = type;
-
-        togglePassword.innerHTML =
-            type === "password"
-                ? '<i class="fa-solid fa-eye"></i>'
-                : '<i class="fa-solid fa-eye-slash"></i>';
-
-    });
-
-}
-
-// Password Strength
-
 const strengthFill = document.getElementById("strength-fill");
 const strengthText = document.getElementById("strength-text");
 
+// ================================
+// Show / Hide Password
+// ================================
+
+togglePassword.addEventListener("click", () => {
+
+    if (password.type === "password") {
+
+        password.type = "text";
+        confirmPassword.type = "text";
+
+        togglePassword.innerHTML =
+            '<i class="fa-solid fa-eye-slash"></i>';
+
+    } else {
+
+        password.type = "password";
+        confirmPassword.type = "password";
+
+        togglePassword.innerHTML =
+            '<i class="fa-solid fa-eye"></i>';
+
+    }
+
+});
+
+// ================================
+// Password Strength
+// ================================
+
 password.addEventListener("input", () => {
 
-    const value = password.value;
     let strength = 0;
+    const value = password.value;
 
     if (value.length >= 8)
         strength++;
@@ -65,7 +72,7 @@ password.addEventListener("input", () => {
         case 2:
 
             strengthFill.style.width = "50%";
-            strengthFill.style.background = "#ffaa00";
+            strengthFill.style.background = "#ff9800";
             strengthText.innerHTML = "Medium Password";
 
             break;
@@ -90,53 +97,82 @@ password.addEventListener("input", () => {
 
 });
 
+// ================================
 // Signup Form
+// ================================
 
-const form = document.querySelector(".signup-card");
+const signupForm = document.getElementById("signupForm");
 
-form.addEventListener("submit", function (e) {
+signupForm.addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    const first =
-        document.querySelectorAll("input")[0].value.trim();
+    const firstName =
+        document.getElementById("firstName").value.trim();
 
-    const last =
-        document.querySelectorAll("input")[1].value.trim();
+    const lastName =
+        document.getElementById("lastName").value.trim();
 
     const email =
-        document.querySelector('input[type="email"]').value.trim();
+        document.getElementById("email").value.trim();
 
     const phone =
-        document.querySelector('input[type="tel"]').value.trim();
+        document.getElementById("phone").value.trim();
 
-    if (
-        first === "" ||
-        last === "" ||
+    if(
+        firstName === "" ||
+        lastName === "" ||
         email === "" ||
         phone === "" ||
         password.value === "" ||
         confirmPassword.value === ""
-    ) {
+    ){
 
-        alert("Please fill all fields.");
+        alert("Please fill in all fields.");
+
         return;
 
     }
 
-    if (password.value !== confirmPassword.value) {
+    // Email Validation
+
+    const emailPattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!emailPattern.test(email)){
+
+        alert("Please enter a valid email address.");
+
+        return;
+
+    }
+
+    // Mobile Validation
+
+    if(phone.length < 10){
+
+        alert("Please enter a valid mobile number.");
+
+        return;
+
+    }
+
+    // Password Match
+
+    if(password.value !== confirmPassword.value){
 
         alert("Passwords do not match.");
+
         return;
 
     }
 
-    const btn =
+    const button =
         document.querySelector(".signup-btn");
 
-    btn.disabled = true;
+    button.disabled = true;
 
-    btn.innerHTML =
+    button.innerHTML =
         '<i class="fa-solid fa-spinner fa-spin"></i> Creating Account...';
 
     setTimeout(() => {
@@ -145,28 +181,30 @@ form.addEventListener("submit", function (e) {
 
         window.location.href = "login.html";
 
-    }, 1800);
+    },1800);
 
 });
 
+// ================================
 // Input Animation
+// ================================
 
 const inputs =
-    document.querySelectorAll("input");
+document.querySelectorAll(".input-box input");
 
-inputs.forEach(input => {
+inputs.forEach(input=>{
 
-    input.addEventListener("focus", () => {
+    input.addEventListener("focus",()=>{
 
         input.parentElement.style.transform =
-            "scale(1.02)";
+        "scale(1.02)";
 
     });
 
-    input.addEventListener("blur", () => {
+    input.addEventListener("blur",()=>{
 
         input.parentElement.style.transform =
-            "scale(1)";
+        "scale(1)";
 
     });
 
