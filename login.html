@@ -7,19 +7,21 @@
 
     <title>SafeSphere | Login</title>
 
+    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/login.css">
+    <!-- Auth CSS -->
+    <link rel="stylesheet" href="css/auth.css">
 </head>
 
 <body>
 
-    <!-- Background Animation -->
+    <!-- Animated Background -->
     <div class="bg-animation">
         <span></span>
         <span></span>
@@ -30,25 +32,24 @@
 
     <div class="login-container">
 
-        <!-- Left Side -->
+        <!-- Left Panel -->
         <div class="left-panel">
 
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <i class="fa-solid fa-shield-halved"></i>
                 <h2>SafeSphere</h2>
-            </div>
+            </a>
 
             <span class="badge">
-                AI Powered Safety Platform
+                AI Powered Industrial Safety Platform
             </span>
 
-            <h1>
-                Welcome Back
-            </h1>
+            <h1>Welcome Back</h1>
 
             <p>
-                Continue monitoring workplace safety with real-time PPE detection,
-                worker verification and industrial analytics.
+                Continue monitoring workplace safety with AI-powered PPE
+                detection, employee verification, attendance management,
+                live monitoring and industrial compliance analytics.
             </p>
 
             <div class="stats">
@@ -56,29 +57,29 @@
                 <div class="stat-card">
                     <i class="fa-solid fa-users"></i>
                     <h3>124+</h3>
-                    <span>Workers</span>
+                    <span>Workers On Site</span>
                 </div>
 
                 <div class="stat-card">
                     <i class="fa-solid fa-shield-halved"></i>
                     <h3>97%</h3>
-                    <span>Compliance</span>
+                    <span>PPE Compliance</span>
                 </div>
 
             </div>
 
         </div>
 
-        <!-- Right Side -->
+        <!-- Right Panel -->
 
         <div class="right-panel">
 
-            <form class="login-card">
+            <form class="login-card" id="loginForm">
 
                 <h2>Login</h2>
 
                 <p>
-                    Access your SafeSphere dashboard
+                    Access your SafeSphere Dashboard
                 </p>
 
                 <!-- Email -->
@@ -89,7 +90,10 @@
 
                     <input
                         type="email"
+                        id="email"
+                        name="email"
                         placeholder="Email Address"
+                        autocomplete="email"
                         required>
 
                 </div>
@@ -103,7 +107,9 @@
                     <input
                         type="password"
                         id="password"
+                        name="password"
                         placeholder="Password"
+                        autocomplete="current-password"
                         required>
 
                     <span id="togglePassword">
@@ -113,6 +119,8 @@
                     </span>
 
                 </div>
+
+                <!-- Remember -->
 
                 <div class="options">
 
@@ -130,17 +138,23 @@
 
                 </div>
 
+                <!-- Login Button -->
+
                 <button type="submit" class="login-btn">
 
                     Login
 
                 </button>
 
+                <!-- Divider -->
+
                 <div class="divider">
 
                     <span>OR</span>
 
                 </div>
+
+                <!-- Social Login -->
 
                 <div class="social-login">
 
@@ -162,6 +176,8 @@
 
                 </div>
 
+                <!-- Bottom -->
+
                 <div class="bottom-text">
 
                     Don't have an account?
@@ -180,6 +196,7 @@
 
     </div>
 
+    <!-- Login JS -->
     <script src="js/login.js"></script>
 
 </body>
