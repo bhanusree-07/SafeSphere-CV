@@ -1,0 +1,823 @@
+/* ==========================================
+   SafeSphere Premium Auth CSS - Part 1
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#06121f,#0b2238,#123b5d,#0a4d68);
+    color:#fff;
+}
+
+/* Animated Background */
+
+.bg-animation{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-2;
+}
+
+.bg-animation span{
+    position:absolute;
+    display:block;
+    border-radius:50%;
+    background:rgba(0,212,255,.08);
+    animation:float 20s linear infinite;
+    bottom:-220px;
+    filter:blur(1px);
+}
+
+.bg-animation span:nth-child(1){
+    width:180px;
+    height:180px;
+    left:8%;
+    animation-duration:18s;
+}
+
+.bg-animation span:nth-child(2){
+    width:260px;
+    height:260px;
+    left:28%;
+    animation-duration:24s;
+}
+
+.bg-animation span:nth-child(3){
+    width:220px;
+    height:220px;
+    left:52%;
+    animation-duration:20s;
+}
+
+.bg-animation span:nth-child(4){
+    width:160px;
+    height:160px;
+    left:74%;
+    animation-duration:17s;
+}
+
+.bg-animation span:nth-child(5){
+    width:300px;
+    height:300px;
+    left:88%;
+    animation-duration:28s;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0) rotate(0);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+/* Main Layout */
+
+.login-container,
+.signup-container{
+
+    width:95%;
+    max-width:1300px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    padding:40px;
+
+}
+
+/* Left Side */
+
+.left-panel{
+
+    width:50%;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:30px;
+
+}
+
+.logo i{
+
+    font-size:34px;
+    color:#00d4ff;
+
+}
+
+.logo h2{
+
+    font-size:32px;
+    font-weight:700;
+
+}
+
+.badge{
+
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    color:#00d4ff;
+    margin-bottom:25px;
+    border:1px solid rgba(255,255,255,.12);
+
+}
+
+.left-panel h1{
+
+    font-size:58px;
+    margin-bottom:20px;
+    line-height:1.15;
+
+}
+
+.left-panel p{
+
+    color:#d8d8d8;
+    line-height:1.8;
+    font-size:18px;
+    max-width:550px;
+
+}
+
+/* Stats */
+
+.stats{
+
+    display:flex;
+    gap:25px;
+    margin-top:50px;
+
+}
+
+.stat-card{
+
+    width:180px;
+    padding:25px;
+    border-radius:22px;
+    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    transition:.4s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(0,212,255,.18);
+
+}
+
+.stat-card i{
+
+    font-size:28px;
+    color:#00d4ff;
+    margin-bottom:15px;
+
+}
+
+.stat-card h3{
+
+    font-size:30px;
+    margin-bottom:8px;
+
+}
+
+.stat-card span{
+
+    color:#bdbdbd;
+
+}
+
+/* Right Side */
+
+.right-panel{
+
+    width:50%;
+    display:flex;
+    justify-content:center;
+
+}
+
+/* Auth Card */
+
+.login-card,
+.signup-card{
+
+    width:450px;
+    padding:45px;
+    border-radius:30px;
+    backdrop-filter:blur(25px);
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+
+}
+
+.login-card h2,
+.signup-card h2{
+
+    font-size:34px;
+    margin-bottom:10px;
+
+}
+
+.login-card p,
+.signup-card p{
+
+    color:#cccccc;
+    margin-bottom:35px;
+
+}
+
+/* Inputs */
+
+.input-box{
+
+    position:relative;
+    margin-bottom:22px;
+
+}
+
+.input-box i{
+
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#00d4ff;
+    font-size:16px;
+
+}
+
+.input-box input{
+
+    width:100%;
+    padding:16px 18px 16px 50px;
+    border:none;
+    outline:none;
+    border-radius:14px;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    font-size:15px;
+    transition:.3s;
+
+}
+
+.input-box input::placeholder{
+
+    color:#b8b8b8;
+
+}
+
+.input-box input:focus{
+
+    border:1px solid #00d4ff;
+    box-shadow:0 0 18px rgba(0,212,255,.3);
+
+}
+
+.password-box span{
+
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:#00d4ff;
+
+}
+/* ==========================================
+   SafeSphere Premium Auth CSS - Part 2
+========================================== */
+
+/* Remember & Forgot */
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.options label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#d9d9d9;
+    cursor:pointer;
+}
+
+.options input[type="checkbox"]{
+    accent-color:#00d4ff;
+}
+
+.options a{
+    color:#00d4ff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.options a:hover{
+    color:#5ce8ff;
+}
+
+/* Main Button */
+
+.login-btn,
+.signup-btn{
+
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(90deg,#00d4ff,#00b4d8);
+    color:#06121f;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.login-btn:hover,
+.signup-btn:hover{
+
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,212,255,.35);
+
+}
+
+/* Divider */
+
+.divider{
+
+    display:flex;
+    align-items:center;
+    margin:28px 0;
+    color:#bcbcbc;
+
+}
+
+.divider::before,
+.divider::after{
+
+    content:"";
+    flex:1;
+    height:1px;
+    background:rgba(255,255,255,.15);
+
+}
+
+.divider span{
+
+    margin:0 15px;
+    font-size:14px;
+
+}
+
+/* Social Buttons */
+
+.social-login{
+
+    display:flex;
+    gap:15px;
+
+}
+
+.social-login button{
+
+    flex:1;
+    padding:14px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.08);
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.social-login button:hover{
+
+    background:#00d4ff;
+    color:#06121f;
+    transform:translateY(-2px);
+
+}
+
+.social-login i{
+
+    margin-right:8px;
+
+}
+
+/* Bottom Link */
+
+.bottom-text{
+
+    text-align:center;
+    margin-top:30px;
+    color:#d6d6d6;
+
+}
+
+.bottom-text a{
+
+    color:#00d4ff;
+    text-decoration:none;
+    font-weight:600;
+
+}
+
+.bottom-text a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* Signup Extra */
+
+.name-group{
+
+    display:flex;
+    gap:15px;
+
+}
+
+.name-group .input-box{
+
+    flex:1;
+
+}
+
+/* Password Strength */
+
+.strength{
+
+    margin-top:-10px;
+    margin-bottom:18px;
+
+}
+
+.strength-bar{
+
+    width:100%;
+    height:8px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    overflow:hidden;
+
+}
+
+.strength-fill{
+
+    width:0%;
+    height:100%;
+    background:#00d4ff;
+    transition:.4s;
+
+}
+
+.strength p{
+
+    font-size:13px;
+    margin-top:8px;
+    color:#bfbfbf;
+
+}
+
+/* Terms */
+
+.terms{
+
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin-bottom:25px;
+    font-size:14px;
+    color:#d5d5d5;
+
+}
+
+.terms input{
+
+    accent-color:#00d4ff;
+    margin-top:3px;
+
+}
+
+.terms a{
+
+    color:#00d4ff;
+    text-decoration:none;
+
+}
+
+/* Success Animation */
+
+.login-btn:active,
+.signup-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* Card Hover */
+
+.login-card:hover,
+.signup-card:hover{
+
+    box-shadow:0 35px 70px rgba(0,212,255,.15);
+    transition:.4s;
+
+}
+
+/* Input Hover */
+
+.input-box input:hover{
+
+    background:rgba(255,255,255,.11);
+
+}
+
+/* Floating Glow */
+
+.login-card::before,
+.signup-card::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:30px;
+    padding:1px;
+    background:linear-gradient(135deg,
+    rgba(0,212,255,.4),
+    transparent,
+    rgba(255,255,255,.15));
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    pointer-events:none;
+
+}
+
+.login-card,
+.signup-card{
+
+    position:relative;
+
+}
+/* ==========================================
+   SafeSphere Premium Auth CSS - Part 3
+========================================== */
+
+/* Smooth Fade Animation */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.left-panel,
+.right-panel{
+    animation:fadeUp .8s ease;
+}
+
+/* Button Shine Effect */
+
+.login-btn,
+.signup-btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.login-btn::before,
+.signup-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    transition:.8s;
+}
+
+.login-btn:hover::before,
+.signup-btn:hover::before{
+    left:120%;
+}
+
+/* Logo Hover */
+
+.logo{
+    transition:.3s;
+}
+
+.logo:hover{
+    transform:scale(1.03);
+}
+
+.logo i{
+    transition:.3s;
+}
+
+.logo:hover i{
+    transform:rotate(-10deg);
+    color:#5ce8ff;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00d4ff;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#081420;
+}
+
+/* Responsive */
+
+@media(max-width:1100px){
+
+.login-container,
+.signup-container{
+
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+    padding:25px;
+
+}
+
+.left-panel,
+.right-panel{
+
+    width:100%;
+
+}
+
+.left-panel p{
+
+    margin:auto;
+
+}
+
+.stats{
+
+    justify-content:center;
+
+}
+
+.login-card,
+.signup-card{
+
+    width:100%;
+    max-width:480px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.left-panel h1{
+
+    font-size:42px;
+
+}
+
+.logo h2{
+
+    font-size:28px;
+
+}
+
+.stats{
+
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.name-group{
+
+    flex-direction:column;
+
+}
+
+.social-login{
+
+    flex-direction:column;
+
+}
+
+.options{
+
+    flex-direction:column;
+    gap:12px;
+    align-items:flex-start;
+
+}
+
+}
+
+@media(max-width:500px){
+
+body{
+
+    overflow-y:auto;
+
+}
+
+.login-container,
+.signup-container{
+
+    padding:15px;
+
+}
+
+.login-card,
+.signup-card{
+
+    padding:30px 20px;
+
+}
+
+.left-panel h1{
+
+    font-size:34px;
+
+}
+
+.badge{
+
+    font-size:13px;
+
+}
+
+.input-box input{
+
+    font-size:14px;
+
+}
+
+.login-btn,
+.signup-btn{
+
+    font-size:15px;
+
+}
+
+}
