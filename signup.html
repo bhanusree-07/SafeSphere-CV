@@ -4,19 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>SafeSphere | Sign Up</title>
 
+    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- Auth CSS -->
     <link rel="stylesheet" href="css/auth.css">
 </head>
 
 <body>
+
+    <!-- Animated Background -->
 
     <div class="bg-animation">
         <span></span>
@@ -28,88 +32,140 @@
 
     <div class="signup-container">
 
-        <!-- Left Side -->
+        <!-- Left Panel -->
 
         <div class="left-panel">
 
-            <div class="logo">
+            <a href="index.html" class="logo">
+
                 <i class="fa-solid fa-shield-halved"></i>
+
                 <h2>SafeSphere</h2>
-            </div>
+
+            </a>
 
             <span class="badge">
-                Smart Industrial Safety
+
+                Industrial Safety Compliance System
+
             </span>
 
-            <h1>Create Account</h1>
+            <h1>
+
+                Create Your Account
+
+            </h1>
 
             <p>
-                Join SafeSphere and manage industrial safety with
-                AI-powered PPE monitoring, employee tracking,
-                attendance and compliance reporting.
+
+                Register to access workplace safety monitoring,
+                employee management, attendance records,
+                PPE compliance and safety reports.
+
             </p>
 
             <div class="stats">
 
                 <div class="stat-card">
+
                     <i class="fa-solid fa-users"></i>
+
                     <h3>500+</h3>
-                    <span>Employees</span>
+
+                    <span>Registered Employees</span>
+
                 </div>
 
                 <div class="stat-card">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h3>99%</h3>
-                    <span>Security</span>
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <h3>24/7</h3>
+
+                    <span>System Monitoring</span>
+
                 </div>
 
             </div>
 
         </div>
 
-        <!-- Right Side -->
+        <!-- Right Panel -->
 
         <div class="right-panel">
 
-            <form class="signup-card">
+            <form class="signup-card" id="signupForm">
 
                 <h2>Sign Up</h2>
 
-                <p>Create your SafeSphere account</p>
+                <p>
+
+                    Create your SafeSphere account
+
+                </p>
+
+                <!-- Name -->
 
                 <div class="name-group">
 
                     <div class="input-box">
+
                         <i class="fa-solid fa-user"></i>
-                        <input type="text"
+
+                        <input
+                            type="text"
+                            id="firstName"
                             placeholder="First Name"
                             required>
+
                     </div>
 
                     <div class="input-box">
+
                         <i class="fa-solid fa-user"></i>
-                        <input type="text"
+
+                        <input
+                            type="text"
+                            id="lastName"
                             placeholder="Last Name"
                             required>
+
                     </div>
 
                 </div>
 
+                <!-- Email -->
+
                 <div class="input-box">
+
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email"
+
+                    <input
+                        type="email"
+                        id="email"
                         placeholder="Email Address"
                         required>
+
                 </div>
+
+                <!-- Phone -->
 
                 <div class="input-box">
+
                     <i class="fa-solid fa-phone"></i>
-                    <input type="tel"
+
+                    <input
+                        type="tel"
+                        id="phone"
                         placeholder="Mobile Number"
                         required>
+
                 </div>
 
+                <!-- Password -->
+
                 <div class="input-box password-box">
+
                     <i class="fa-solid fa-lock"></i>
 
                     <input
@@ -119,28 +175,37 @@
                         required>
 
                     <span id="togglePassword">
+
                         <i class="fa-solid fa-eye"></i>
+
                     </span>
 
                 </div>
+
+                <!-- Strength -->
 
                 <div class="strength">
 
                     <div class="strength-bar">
 
-                        <div class="strength-fill"
+                        <div
+                            class="strength-fill"
                             id="strength-fill">
                         </div>
 
                     </div>
 
                     <p id="strength-text">
+
                         Password Strength
+
                     </p>
 
                 </div>
 
-                <div class="input-box password-box">
+                <!-- Confirm Password -->
+
+                <div class="input-box">
 
                     <i class="fa-solid fa-lock"></i>
 
@@ -152,19 +217,29 @@
 
                 </div>
 
+                <!-- Terms -->
+
                 <div class="terms">
 
-                    <input type="checkbox" required>
+                    <input
+                        type="checkbox"
+                        required>
 
                     <label>
 
                         I agree to the
 
-                        <a href="#">Terms & Conditions</a>
+                        <a href="#">
+
+                            Terms & Conditions
+
+                        </a>
 
                     </label>
 
                 </div>
+
+                <!-- Button -->
 
                 <button
                     type="submit"
@@ -174,23 +249,37 @@
 
                 </button>
 
+                <!-- Divider -->
+
                 <div class="divider">
+
                     <span>OR</span>
+
                 </div>
+
+                <!-- Social -->
 
                 <div class="social-login">
 
                     <button type="button">
+
                         <i class="fab fa-google"></i>
+
                         Google
+
                     </button>
 
                     <button type="button">
+
                         <i class="fab fa-microsoft"></i>
+
                         Microsoft
+
                     </button>
 
                 </div>
+
+                <!-- Bottom -->
 
                 <div class="bottom-text">
 
