@@ -4,114 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>SafeSphere | Industrial Safety Compliance System</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Main CSS -->
     <link rel="stylesheet" href="css/index.css">
-
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- Animated Background -->
+    <div class="bg-circle circle1"></div>
+    <div class="bg-circle circle2"></div>
+    <div class="bg-circle circle3"></div>
+
+    <!-- Navbar -->
 
     <nav class="navbar">
 
         <div class="logo">
-
             <i class="fa-solid fa-shield-halved"></i>
-
             <h2>SafeSphere</h2>
-
         </div>
 
-        <ul>
-
+        <ul class="nav-links">
             <li><a href="#">Home</a></li>
-
             <li><a href="#features">Features</a></li>
-
             <li><a href="#about">About</a></li>
-
             <li><a href="#contact">Contact</a></li>
-
         </ul>
 
         <div class="nav-buttons">
 
             <button id="theme-btn">
-
                 <i class="fa-solid fa-moon"></i>
-
             </button>
 
             <a href="login.html" class="login-btn">
-
                 Login
-
             </a>
 
             <a href="signup.html" class="signup-btn">
-
                 Sign Up
-
             </a>
 
         </div>
 
     </nav>
 
-    <!-- ================= HERO SECTION ================= -->
+    <!-- Hero -->
 
     <section class="hero">
 
-        <div class="hero-text">
+        <div class="hero-left">
 
             <span class="tag">
-
                 Industrial Safety Compliance System
-
             </span>
 
             <h1>
-
                 Workplace Safety
                 <br>
-                Management
-
+                Starts Here
             </h1>
 
             <p>
-
-                SafeSphere helps industries maintain workplace safety,
-                monitor employee attendance, verify personnel,
-                track PPE compliance, and generate safety reports
-                through one secure and user-friendly platform.
-
+                Monitor employee verification, PPE compliance,
+                attendance tracking, safety reports and workplace
+                access from one secure platform.
             </p>
+
+            <!-- Login button removed here -->
 
             <div class="hero-buttons">
 
-                <a href="login.html" class="primary">
-
-                    Login
-
-                </a>
-
                 <a href="#features" class="secondary">
-
                     Explore Features
-
                 </a>
+
+            </div>
+
+            <div class="stats-row">
+
+                <div class="glass-card">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h2>124+</h2>
+
+                    <p>Workers On Site</p>
+
+                </div>
+
+                <div class="glass-card">
+
+                    <i class="fa-solid fa-shield"></i>
+
+                    <h2>97%</h2>
+
+                    <p>PPE Compliance</p>
+
+                </div>
 
             </div>
 
@@ -119,158 +117,49 @@
 
         <div class="hero-right">
 
-            <div class="glass-card">
+            <div class="dashboard-card">
 
-                <div class="circle green"></div>
+                <div class="status">
+                    LIVE
+                </div>
 
-                <h3>Safety Compliance</h3>
+                <h3>Today's Safety Status</h3>
 
-                <h1>97%</h1>
+                <div class="progress-box">
 
-                <p>Current Compliance</p>
+                    <span>Compliance</span>
 
-            </div>
+                    <strong>97%</strong>
 
-            <div class="glass-card">
+                </div>
 
-                <div class="circle blue"></div>
+                <div class="progress">
 
-                <h3>Employees Present</h3>
+                    <div class="progress-fill"></div>
 
-                <h1>124</h1>
+                </div>
 
-                <p>Today's Attendance</p>
+                <div class="dashboard-stats">
 
-            </div>
+                    <div>
+                        <h4>124</h4>
+                        <p>Employees</p>
+                    </div>
 
-        </div>
+                    <div>
+                        <h4>12</h4>
+                        <p>Departments</p>
+                    </div>
 
-    </section>
-        <!-- ================= FEATURES ================= -->
+                    <div>
+                        <h4>0</h4>
+                        <p>Incidents</p>
+                    </div>
 
-    <section class="features" id="features">
-
-        <h2>Core Features</h2>
-
-        <p class="section-text">
-            Everything required to manage workplace safety from one platform.
-        </p>
-
-        <div class="feature-grid">
-
-            <div class="feature">
-
-                <i class="fa-solid fa-helmet-safety"></i>
-
-                <h3>PPE Compliance</h3>
-
-                <p>
-                    Verify safety equipment compliance before employees
-                    enter the workplace.
-                </p>
-
-            </div>
-
-            <div class="feature">
-
-                <i class="fa-solid fa-user-check"></i>
-
-                <h3>Employee Verification</h3>
-
-                <p>
-                    Verify employee identity and maintain attendance
-                    records securely.
-                </p>
-
-            </div>
-
-            <div class="feature">
-
-                <i class="fa-solid fa-chart-column"></i>
-
-                <h3>Safety Dashboard</h3>
-
-                <p>
-                    Monitor compliance, attendance and workplace
-                    activities through a centralized dashboard.
-                </p>
-
-            </div>
-
-            <div class="feature">
-
-                <i class="fa-solid fa-door-open"></i>
-
-                <h3>Access Management</h3>
-
-                <p>
-                    Allow workplace access only after required
-                    safety checks are completed.
-                </p>
+                </div>
 
             </div>
 
         </div>
 
     </section>
-
-    <!-- ================= ABOUT ================= -->
-
-    <section class="features" id="about">
-
-        <h2>About SafeSphere</h2>
-
-        <p class="section-text">
-
-            SafeSphere is an Industrial Safety Compliance System
-            designed to help organizations improve workplace safety,
-            employee management, attendance tracking and compliance
-            reporting through a single easy-to-use platform.
-
-        </p>
-
-    </section>
-
-    <!-- ================= CONTACT ================= -->
-
-    <section class="features" id="contact">
-
-        <h2>Contact</h2>
-
-        <p class="section-text">
-
-            Email : support@safesphere.com
-
-            <br><br>
-
-            Phone : +91 98765 43210
-
-            <br><br>
-
-            Location : India
-
-        </p>
-
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <p>
-
-            © 2026 SafeSphere
-
-            <br><br>
-
-            Industrial Safety Compliance System
-
-        </p>
-
-    </footer>
-
-    <script src="js/index.js"></script>
-
-</body>
-
-</html>
